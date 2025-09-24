@@ -1,6 +1,6 @@
-/* ========================= */
+
 /* RESET & BASE STYLES       */
-/* ========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +8,9 @@
     font-family: Arial, sans-serif;
 }
 
-/* ========================= */
+
 /* NAVIGATION BAR            */
-/* ========================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,9 +50,9 @@
     color: #eaa4a4;
 }
 
-/* ========================= */
-/* BODY & BACKGROUND         */
-/* ========================= */
+
+/* BODY & BACKGROUND  */
+
 body {
   min-height: 100vh;
   padding-top: 0px; /* to avoid navbar overlap */
@@ -66,9 +66,9 @@ body {
   padding-top: 120px;
   position: relative;
 }
-/* ========================= */
-/* ABOUT SECTION             */
-/* ========================= */
+
+/* ABOUT SECTION   */
+
 .about-section {
     display: flex;
     align-items: center;
@@ -97,10 +97,8 @@ body {
     line-height: 1.6;
 }
 
+/* IMAGE LAYOUT   */
 
-/* ========================= */
-/* IMAGE LAYOUT              */
-/* ========================= */
 .image-layout {
     display: flex;
     gap: 20px;
@@ -124,9 +122,9 @@ body {
     height: 88%;
 }
 
-/* ========================= */
-/* BUTTON                    */
-/* ========================= */
+
+/* BUTTON  */
+
 .my-button {
     border: none;
     background-color: #de5947;
@@ -147,17 +145,17 @@ body {
     background-color: #eaa4a4;
 }
 
-/* ========================= */
-/* MAIN CONTENT              */
-/* ========================= */
+
+/* MAIN CONTENT   */
+
 main {
     padding: 50px;
     text-align: center;
 }
 
-/* ========================= */
-/* RESPONSIVE ADJUSTMENTS    */
-/* ========================= */
+
+/* RESPONSIVE ADJUSTMENTS  */
+
 @media (max-width: 1024px) {
     .about-text {
         top: 150px;
