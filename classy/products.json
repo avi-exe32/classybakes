@@ -13,6 +13,11 @@
                 "image/cake2.jpg",
                 "image/cake3.jpg"
             ]
+        },
+        "details": {
+            "description": "Indulge in our rich and decadent Chocolate Fudge Cake, a true masterpiece for chocolate lovers. Layers of moist, dark chocolate sponge are generously filled and frosted with smooth, velvety chocolate fudge ganache. Each bite is a journey into chocolate heaven, perfectly balanced with a hint of sweetness. Ideal for birthdays, anniversaries, or any occasion that calls for a serious chocolate fix. Made with premium cocoa and fresh ingredients to ensure a superior taste experience.",
+            "quality_care": "Store in a cool, dry place away from direct sunlight. Refrigerate if not consumed within 24 hours. Best served at room temperature for optimal flavor and texture. Our cakes are freshly baked daily using high-quality ingredients with no artificial preservatives. Consume within 3 days of delivery. Handle with care.",
+            "reviews_content": "<p><strong>Sarah L. (5/5):</strong> \"Absolutely divine! The best chocolate cake I've ever had.\"</p><p><strong>Amit K. (4/5):</strong> \"Very rich and delicious. A bit too sweet for me, but my family loved it!\"</p><p><strong>Priya S. (5/5):</strong> \"Prompt delivery and perfect taste. Highly recommend Classy Bakes!\"</p>"
         }
     },
     {

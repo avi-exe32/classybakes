@@ -137,8 +137,8 @@ body {
     font-weight: 700;
     font-size: 28px;
     color: var(--light-text);
+    text-decoration: none; /* ADD THIS LINE */
 }
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -540,7 +540,7 @@ body {
    PRODUCT DETAIL PAGE
    ========================================================================== */
 .product-page-container {
-    padding: 120px 50px 80px 50px; /* Top padding to clear navbar */
+    padding: 100px 50px 80px 50px; /* Changed 120px to 100px */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -709,4 +709,124 @@ textarea {
 
 .btn-add-to-cart:hover, .btn-buy-now:hover {
     transform: translateY(-2px);
+}
+
+/* --- Product Info Section (Description Tabs) --- */
+.product-info-section {
+    width: 100%;
+    margin-top: 60px; /* Adds space above the tabs */
+    padding-top: 30px;
+    border-top: 1px solid #eee; /* Light separator line */
+    /* REMOVED background-color and vertical padding */
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the left */
+    border-bottom: 2px solid var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-text); /* Default tab text color */
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    outline: none; /* Remove focus outline */
+}
+
+.tab-button:hover {
+    color: var(--primary-color); /* Highlight on hover */
+}
+
+.tab-button.active {
+    color: var(--primary-color); /* Active tab text color */
+    border-bottom: 2px solid var(--primary-color); /* Underline for active tab */
+    padding-bottom: 13px; /* Adjust to keep padding consistent with border */
+}
+
+.tab-content-container {
+    padding: 20px 0;
+}
+
+.tab-pane {
+    display: none; /* Hide inactive panes */
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.tab-pane.active {
+    display: block; /* Show active pane */
+}
+
+.tab-pane h3 {
+    font-size: 22px;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+}
+
+.tab-pane p {
+    margin-bottom: 10px;
+}
+
+/* --- Full-Width Product Info Section (Description Tabs) --- */
+.product-info-section {
+    width: 100%;
+    margin-top: 60px; /* Adds space above the tabs */
+    padding-top: 30px;
+    border-top: 1px solid #eee; /* A light separator line */
+}
+/* New container to keep tab content centered */
+.info-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid rgba(59, 47, 47, 0.2); /* Softer border color */
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-text);
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    outline: none;
+    border-bottom: 3px solid transparent; /* Placeholder for active border */
+    margin-bottom: -2px; /* Aligns with the main border */
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.tab-content-container {
+    padding: 20px 0;
+}
+
+.tab-pane {
+    display: none;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane p {
+    margin-bottom: 10px;
 }

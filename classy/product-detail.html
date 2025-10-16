@@ -16,7 +16,7 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-text">Classy Bakes</div>
+        <a href="index.html" class="nav-text">Classy Bakes</a>
         <ul class="nav-links">
             <li><a href="index.html#hero">Home</a></li>
             <li><a href="index.html#about">About</a></li>
@@ -72,6 +72,23 @@
                 </div>
             </div>
         </div>
+        
+    </main> <section class="product-info-section">
+        <div class="info-section-container">
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="description">Description</button>
+                <button class="tab-button" data-tab="quality_care">Quality & Care</button>
+                <button class="tab-button" data-tab="reviews_content">Reviews (<span id="tab-reviews-count">0</span>)</button>
+            </div>
+            <div class="tab-content-container">
+                <div id="description-content" class="tab-pane active"></div>
+                <div id="quality_care-content" class="tab-pane"></div>
+                <div id="reviews_content-content" class="tab-pane"></div>
+            </div>
+        </div>
+    </section>
+    </div>
+</div>
     </main>
 
     <footer id="contact" class="site-footer">
