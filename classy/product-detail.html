@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classy Bakes - Handcrafted Perfection</title>
+    <title>Product Details - Classy Bakes</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,65 +18,61 @@
     <nav class="navbar">
         <div class="nav-text">Classy Bakes</div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Purity In Every <br> Bite</h1>
-            <p>Experience handcrafted cakes, baked with passion and the finest ingredients.</p>
-            <a href="#menu" class="cta-button">View Our Menu</a>
-        </div>
-    </section>
+    <main class="product-page-container">
+        <div class="product-grid">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="" alt="Loading product image" id="main-product-image">
+                </div>
+                <div class="thumbnail-images" id="thumbnail-container">
+                    </div>
+            </div>
 
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="image/brownie.png" alt="Baker decorating a cake">
-            </div>
-            <div class="about-text">
-                <h2>Our Story</h2>
-                <p>Welcome to Classy Bakes, where baking is more than a process—it's an art. Founded on a love for timeless recipes and quality ingredients, we pour our hearts into every creation. From elegant wedding cakes to delightful everyday treats, each bite tells a story of dedication and handcrafted perfection.</p>
-            </div>
-        </div>
-    </section>
+            <div class="product-details-content">
+                <h1 class="product-title" id="product-name">Loading...</h1>
+                <div class="product-rating">
+                    <span id="product-rating"></span>
+                    <i class="fas fa-star"></i>
+                    <a href="#" class="reviews-link"><span id="product-reviews"></span> Reviews</a>
+                </div>
+                <p class="product-price">₹<span id="product-price"></span></p>
+                
+                <div class="options-group">
+                    <label class="option-label">Weight</label>
+                    <div class="weight-options">
+                        <input type="radio" id="w0_5kg" name="weight" value="0.5" checked><label for="w0_5kg">0.5 KG</label>
+                        <input type="radio" id="w1kg" name="weight" value="1"><label for="w1kg">1.0 KG</label>
+                        <input type="radio" id="w1_5kg" name="weight" value="1.5"><label for="w1_5kg">1.5 KG</label>
+                        <input type="radio" id="w2kg" name="weight" value="2"><label for="w2kg">2.0 KG</label>
+                    </div>
+                </div>
 
-    <section id="menu" class="menu-section">
-        <h2>Our Signature Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img class="item-image" src="image/cake1.jpg" alt="Chocolate Fudge Cake">
-                <div class="item-details">
-                    <h3>Chocolate Fudge</h3>
-                    <p class="item-price">₹450</p>
-                    <button class="order-btn">Order Now</button>
+                <div class="options-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="eggless" name="eggless">
+                        <label for="eggless">Eggless</label>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <label for="message" class="option-label">Message on Cake</label>
+                    <textarea id="message" placeholder="Happy Birthday..." maxlength="70"></textarea>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-add-to-cart">Add To Cart</button>
+                    <button class="btn-buy-now">Buy Now</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img class="item-image" src="image/cake2.jpg" alt="Red Velvet Delight">
-                <div class="item-details">
-                    <h3>Red Velvet Delight</h3>
-                    <p class="item-price">₹550</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
-            <div class="menu-item">
-                <img class="item-image" src="image/cake3.jpg" alt="Blueberry Bliss">
-                <div class="item-details">
-                    <h3>Blueberry Bliss</h3>
-                    <p class="item-price">₹600</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-            </div>
-            </div>
-            <div class="view-more-container">
-            <a href="menu.html" class="view-more-btn">View Our Full Menu</a>
         </div>
-    </section>
+    </main>
 
     <footer id="contact" class="site-footer">
         <div class="footer-container">

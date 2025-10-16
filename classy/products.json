@@ -1,0 +1,90 @@
+[
+    {
+        "id": "chocolate-fudge",
+        "name": "Chocolate Fudge Cake",
+        "price": 450,
+        "rating": 4.8,
+        "reviews": 1014,
+        "category": "cake",
+        "images": {
+            "main": "image/cake1.jpg",
+            "thumbnails": [
+                "image/cake1.jpg",
+                "image/cake2.jpg",
+                "image/cake3.jpg"
+            ]
+        }
+    },
+    {
+        "id": "red-velvet",
+        "name": "Red Velvet Delight",
+        "price": 550,
+        "rating": 4.9,
+        "reviews": 1250,
+        "category": "cake",
+        "images": {
+            "main": "image/cake2.jpg",
+            "thumbnails": [
+                "image/cake2.jpg",
+                "image/cake1.jpg",
+                "image/cake3.jpg"
+            ]
+        }
+    },
+    {
+        "id": "chocolate-cupcake",
+        "name": "Chocolate Cupcake",
+        "price": 90,
+        "rating": 4.7,
+        "reviews": 890,
+        "category": "cupcake",
+        "images": {
+            "main": "image/cupcake_bag.png",
+            "thumbnails": [
+                "image/cupcake_bag.png"
+            ]
+        }
+    },
+    {
+        "id": "fudgy-brownie",
+        "name": "Fudgy Brownie",
+        "price": 120,
+        "rating": 4.9,
+        "reviews": 1530,
+        "category": "brownie",
+        "images": {
+            "main": "image/brownie.png",
+            "thumbnails": [
+                "image/brownie.png"
+            ]
+        }
+    },
+    {
+        "id": "almond-cookie",
+        "name": "Almond Cookie",
+        "price": 60,
+        "rating": 4.6,
+        "reviews": 750,
+        "category": "cookie",
+        "images": {
+            "main": "image/cake2.jpg",
+            "thumbnails": [
+                "image/cake2.jpg"
+            ]
+        }
+    },
+    {
+        "id": "fruit-pastry",
+        "name": "Fruit Pastry",
+        "price": 150,
+        "rating": 4.5,
+        "reviews": 680,
+        "category": "pastry",
+        "images": {
+            "main": "image/cake1.jpg",
+            "thumbnails": [
+                "image/cake1.jpg"
+            ]
+        }
+    }
+]

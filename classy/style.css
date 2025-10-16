@@ -1,4 +1,28 @@
-/* === THEME & BASE STYLES === */
+/* ==========================================================================
+   TABLE OF CONTENTS
+   ==========================================================================
+   1. GLOBAL STYLES
+      - Google Fonts Import (handled in HTML)
+      - CSS Variables (Colors & Fonts)
+      - Base & Typography
+   2. REUSABLE COMPONENTS
+      - Buttons (CTA, Order, View More)
+   3. LAYOUT SECTIONS
+      - Navigation Bar
+      - Hero Section
+      - About Us Section
+      - Menu Page (Includes Filter Bar & Grid)
+      - Footer
+   4. RESPONSIVE DESIGN
+      - Media Queries
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. GLOBAL STYLES
+   ========================================================================== */
+
+/* --- CSS Variables (Colors & Fonts) --- */
 :root {
     --primary-color: #3b2f2f; /* Dark, rich brown from the image */
     --accent-color: #483d8b;  /* Deep, muted purple from the blueberries */
@@ -9,6 +33,7 @@
     --body-font: 'Roboto', sans-serif;
 }
 
+/* --- Base & Typography --- */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +41,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,13 +51,78 @@ body {
     line-height: 1.6;
 }
 
-/* === NAVIGATION BAR === */
+/* ==========================================================================
+   2. REUSABLE COMPONENTS
+   ========================================================================== */
+
+/* --- Buttons --- */
+.cta-button {
+    font-family: var(--body-font);
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #5a4db3;
+    transform: translateY(-2px);
+}
+
+.order-btn {
+    font-family: var(--body-font);
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #5a4a4a;
+}
+
+.view-more-btn {
+    font-family: var(--body-font);
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 15px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-more-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================================================
+   3. LAYOUT SECTIONS
+   ========================================================================== */
+
+/* --- Navigation Bar --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(59, 47, 47, 0.85); /* Semi-transparent brown */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background-color: rgba(59, 47, 47, 0.85);
+    backdrop-filter: blur(10px);
     padding: 15px 50px;
     position: fixed;
     width: 100%;
@@ -68,21 +158,19 @@ body {
     color: var(--secondary-color);
 }
 
-/* === HERO SECTION === */
-/* === HERO SECTION === */
+/* --- Hero Section --- */
 .hero {
-    background: url('image/brownie_increse.png') center bottom / cover no-repeat;
-    /* Changed 'right center' to 'center bottom' */
-
+    background: url('image/brownie_increse.png') right center / cover no-repeat;
     height: 100vh;
     color: var(--light-text);
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Still align content to the left */
+    justify-content: flex-start;
     text-align: left;
     position: relative;
     padding: 0 10%;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -90,18 +178,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradient overlay for better text readability */
     background: linear-gradient(to right, rgba(20, 10, 10, 0.7) 30%, transparent 70%);
 }
 
 .hero-content {
-    position: relative; /* Ensure content is above the overlay */
+    position: relative;
     max-width: 550px;
 }
 
 .hero-content h1 {
     font-family: var(--heading-font);
-    font-size: 3.5rem; /* Large, impactful text */
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -111,25 +198,8 @@ body {
     margin-bottom: 30px;
 }
 
-.cta-button {
-    font-family: var(--body-font);
-    background-color: var(--accent-color);
-    color: var(--light-text);
-    padding: 15px 35px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    display: inline-block;
-}
 
-.cta-button:hover {
-    background-color: #5a4db3;
-    transform: translateY(-2px);
-}
-
-/* === ABOUT US SECTION === */
+/* --- About Us Section --- */
 .about-section {
     padding: 80px 50px;
     background-color: var(--secondary-color);
@@ -154,7 +224,7 @@ body {
 }
 
 .about-text {
-    flex: 1.2; /* Give text a bit more space */
+    flex: 1.2;
 }
 
 .about-text h2 {
@@ -164,7 +234,12 @@ body {
     margin-bottom: 20px;
 }
 
-/* === MENU SECTION === */
+
+/* --- Menu Page --- */
+.full-menu-page {
+    padding-top: 80px;
+}
+
 .menu-section {
     padding: 80px 50px;
     text-align: center;
@@ -176,9 +251,93 @@ body {
     margin-bottom: 50px;
 }
 
+.menu-intro {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: -30px auto 50px auto;
+    color: #555;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    gap: 20px;
+}
+
+.search-container {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: var(--accent-color);
+}
+
+#search-btn {
+    padding: 0 15px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select-wrapper::after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--accent-color);
+}
+
+.filter-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--dark-text);
+    transition: border-color 0.3s;
+}
+
+.filter-container select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -222,24 +381,20 @@ body {
     margin-bottom: 20px;
 }
 
-.order-btn {
-    font-family: var(--body-font);
-    border: none;
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 12px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 700;
-    transition: background-color 0.3s;
+#no-results-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 40px;
 }
 
-.order-btn:hover {
-    background-color: #5a4a4a;
+.view-more-container {
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* === FOOTER === */
+
+/* --- Footer --- */
 .site-footer {
     background-color: var(--primary-color);
     padding: 60px 0;
@@ -320,19 +475,238 @@ body {
     font-size: 0.9rem;
 }
 
-/* === RESPONSIVE ADJUSTMENTS === */
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN
+   ========================================================================== */
+
 @media (max-width: 768px) {
+    .hero {
+        justify-content: center;
+        text-align: center;
+        padding: 0 5%;
+    }
+    
+    .hero::before {
+        background: rgba(20, 10, 10, 0.6); /* Uniform overlay on mobile */
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
     .about-container {
         flex-direction: column;
     }
+
     .navbar {
         flex-direction: column;
         padding: 10px;
     }
+
     .nav-links {
         padding-top: 10px;
     }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+}
+
+/* === MENU ITEM LINKS (on menu.html) === */
+.menu-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Makes the whole area clickable */
+}
+
+.order-btn-dummy {
+    /* Mimics your .order-btn style */
+    font-family: var(--body-font);
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+
+/* ==========================================================================
+   PRODUCT DETAIL PAGE
+   ========================================================================== */
+.product-page-container {
+    padding: 120px 50px 80px 50px; /* Top padding to clear navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Two columns */
+    gap: 50px;
+}
+
+/* --- Left Column: Images --- */
+.product-images .main-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail-images img:hover,
+.thumbnail-images img.active {
+    border-color: var(--accent-color);
+}
+
+/* --- Right Column: Details --- */
+.product-title {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.product-rating span {
+    background-color: #26a541;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.product-rating .fa-star {
+    color: #ffc107;
+}
+
+.reviews-link {
+    color: #888;
+    text-decoration: none;
+}
+
+.product-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+}
+
+.options-group {
+    margin-bottom: 25px;
+}
+
+.option-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Weight Selection Styling */
+.weight-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.weight-options input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+.weight-options label {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.weight-options input[type="radio"]:checked + label {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Checkbox Styling */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-option input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-add-to-cart, .btn-buy-now {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-add-to-cart {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-buy-now {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+}
+
+.btn-add-to-cart:hover, .btn-buy-now:hover {
+    transform: translateY(-2px);
 }

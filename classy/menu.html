@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Full Menu - Classy Bakes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-text">Classy Bakes</div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="full-menu-page">
+        <section id="menu" class="menu-section">
+            <h2>Explore Our Menu</h2>
+            <p class="menu-intro">Discover our wide range of handcrafted treats, perfect for any celebration.</p>
+
+            <div class="filter-bar">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search for cakes...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-container">
+                    <div class="custom-select-wrapper">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="cake">Cakes</option>
+                            <option value="cupcake">Cupcakes</option>
+                            <option value="pastry">Pastries</option>
+                            <option value="brownie">Brownies</option>
+                            <option value="cookie">Cookies</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <a href="product-detail.html?id=chocolate-fudge" class="menu-item-link">
+                    <div class="menu-item" data-name="Chocolate Fudge Cake" data-category="cake">
+                        <img class="item-image" src="image/cake1.jpg" alt="Chocolate Fudge Cake">
+                        <div class="item-details">
+                            <h3>Chocolate Fudge</h3>
+                            <p class="item-price">₹450</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html?id=red-velvet" class="menu-item-link">
+                    <div class="menu-item" data-name="Red Velvet Delight" data-category="cake">
+                        <img class="item-image" src="image/cake2.jpg" alt="Red Velvet Delight">
+                        <div class="item-details">
+                            <h3>Red Velvet Delight</h3>
+                            <p class="item-price">₹550</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html?id=chocolate-cupcake" class="menu-item-link">
+                    <div class="menu-item" data-name="Chocolate Cupcake" data-category="cupcake">
+                        <img class="item-image" src="image/cupcake_bag.png" alt="Chocolate Cupcake">
+                        <div class="item-details">
+                            <h3>Chocolate Cupcake</h3>
+                            <p class="item-price">₹90</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html?id=fudgy-brownie" class="menu-item-link">
+                    <div class="menu-item" data-name="Fudgy Brownie" data-category="brownie">
+                        <img class="item-image" src="image/brownie.png" alt="Fudgy Brownie">
+                        <div class="item-details">
+                            <h3>Fudgy Brownie</h3>
+                            <p class="item-price">₹120</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html?id=almond-cookie" class="menu-item-link">
+                    <div class="menu-item" data-name="Almond Cookie" data-category="cookie">
+                        <img class="item-image" src="image/cake2.jpg" alt="Almond Cookie">
+                        <div class="item-details">
+                            <h3>Almond Cookie</h3>
+                            <p class="item-price">₹60</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html?id=fruit-pastry" class="menu-item-link">
+                    <div class="menu-item" data-name="Fruit Pastry" data-category="pastry">
+                        <img class="item-image" src="image/cake3.jpg" alt="Fruit Pastry">
+                        <div class="item-details">
+                            <h3>Fruit Pastry</h3>
+                            <p class="item-price">₹150</p>
+                            <div class="order-btn-dummy">View Details</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <p id="no-results-message" style="display: none;">No items match your search criteria.</p>
+        </section>
+    </main>
+
+     <footer id="contact" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">Classy Bakes</div>
+                <div class="footer-social">
+                    <span>Follow us</span>
+                    <a href="https://www.facebook.com/share/1CY4UJTKS4/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sumitra5307?igsh=NGFuZWpkaWs0eGkx" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3>Our Bakery</h3>
+                    <p>Handcrafted cakes baked with love and the finest ingredients. Every slice tells a story of passion and perfection.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Cake Lane, Bengaluru</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> order@classybakes.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Classy Bakes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
